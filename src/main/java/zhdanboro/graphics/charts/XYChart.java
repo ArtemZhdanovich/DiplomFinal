@@ -65,7 +65,7 @@ public class XYChart extends ApplicationFrame {
     }
     private void customizeResult(JFreeChart chart) {
         final XYPlot plot = chart.getXYPlot();
-        plot.setBackgroundPaint(Color.orange);
+        plot.setBackgroundPaint(Color.CYAN);
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
         renderer.setSeriesShapesVisible(0, false);
         renderer.setSeriesStroke       (0, new BasicStroke(2.5f));
@@ -77,7 +77,7 @@ public class XYChart extends ApplicationFrame {
     }
     private void customizeGraph(JFreeChart chart) {
         final XYPlot plot = chart.getXYPlot();
-        plot.setBackgroundPaint(Color.orange);
+        plot.setBackgroundPaint(Color.CYAN);
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
 
         for (int i = 0; i<4; i++) {

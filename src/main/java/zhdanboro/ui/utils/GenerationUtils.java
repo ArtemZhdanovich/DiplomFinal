@@ -16,7 +16,7 @@ public class GenerationUtils {
         if (map.get("Count").length() == 0)
             map.put("Count", genLen);
         if (map.get("Start").length() == 0)
-            map.put("Start", Integer.toString(0));
+            map.put("Start", Integer.toString(1));
 
         map.put("Deviation", map.get("Deviation").replace(",", "."));
 
