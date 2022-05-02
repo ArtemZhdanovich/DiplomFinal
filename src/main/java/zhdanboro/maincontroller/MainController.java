@@ -1,5 +1,6 @@
 package zhdanboro.maincontroller;
 
+import zhdanboro.analyzing.AnalyzeGeneration;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.GraphicsCreator;
 import zhdanboro.maincontroller.generatecontroller.GenerateController;
@@ -10,9 +11,11 @@ public class MainController {
         GenerateController controller = new GenerateController(args);
         GraphicsCreator creator = new GraphicsCreator("График функции");
 
-        if (!controller.getProperties().isAnalyzeSequence()) {
-            creator.createChart(controller.generateSequence(), controller.getProperties().getDeviation());
-        }
+        Sequence resultSequence = AnalyzeGeneration.createSequenceOffBoundsIndices(controller.generateSequenceArray(), controller.getProperties().getDeviation());
+        creator.createChart(resultSequence);
+
+        Sequence bestSequence = AnalyzeGeneration.findBestSequence(controller.generateSequenceArray(), controller.getProperties().getDeviation());
+        creator.createChart(bestSequence, controller.getProperties().getDeviation());
     }
 
     public static void analyze() {
