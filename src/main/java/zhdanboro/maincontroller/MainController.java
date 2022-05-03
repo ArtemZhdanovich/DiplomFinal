@@ -6,15 +6,22 @@ import zhdanboro.graphics.GraphicsCreator;
 import zhdanboro.maincontroller.generatecontroller.GenerateController;
 
 public class MainController {
+    GenerateController controller;
+    GraphicsCreator creator;
 
-    public static void generate(String[] args) {
-        GenerateController controller = new GenerateController(args);
-        GraphicsCreator creator = new GraphicsCreator("График функции");
-
-        checkFunction(controller, creator);
+    public MainController(String[] args) {
+        controller = new GenerateController(args);
+        creator = new GraphicsCreator("График функции");
+    }
+    public void generate(String[] args) {
+        checkFunction();
     }
 
-    private static void checkFunction(GenerateController controller, GraphicsCreator creator) {
+    private void checkFunction() {
+        checkSingleGraph();
+    }
+
+    private void checkSingleGraph() {
         if (controller.getProperties().isSingleGraph()) {
             Sequence sequence = controller.generateSequence();
             creator.updateTitle(creator.getTitle() + " №" + (controller.getProperties().getStartPosition()+1));
@@ -28,6 +35,10 @@ public class MainController {
             creator = new GraphicsCreator("График функции №" + (resultSequence.getMinIndex()+1));
             creator.createChart(bestSequence, controller.getProperties().getDeviation());
         }
+    }
+
+    private void checkAnalyzeBest(GenerateController controller, GraphicsCreator creator) {
+
     }
 
     public static void analyze() {

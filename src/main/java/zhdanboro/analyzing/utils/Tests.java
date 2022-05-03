@@ -2,6 +2,8 @@ package zhdanboro.analyzing.utils;
 
 import org.apache.commons.math3.special.Erf;
 import org.apache.commons.math3.util.Pair;
+import org.apache.mahout.math.*;
+import org.apache.mahout.math.jet.stat.Gamma;
 import zhdanboro.generation.sequence.Sequence;
 
 public class Tests {
@@ -38,8 +40,10 @@ public class Tests {
             sum += v * v;
         }
         chiSquared = 4.0 * blockLen * sum;
-        double pValue = 0;
+
+        double pValue = Gamma.incompleteGammaComplement(blockCount/2.0, chiSquared/2.0);
         boolean testOk = pValue>0.01;
+
         return new Pair<>(pValue, testOk);
     }
 }

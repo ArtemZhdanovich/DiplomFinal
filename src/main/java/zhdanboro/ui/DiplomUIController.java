@@ -151,6 +151,7 @@ public class DiplomUIController {
 
         String[] args = GenerationUtils.packInfo(generateParameters);
 
-        MainController.generate(args);
+        MainController controller = new MainController(args);
+        controller.generate(args);
     }
 }
