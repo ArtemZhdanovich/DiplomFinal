@@ -11,9 +11,15 @@ public class Sequence implements Iterable<Double>{
         sequence = new ArrayList<>();
     }
     public Sequence(double[] array) {
-        sequence = new ArrayList<>();
+        this();
         for (double val:array)
             sequence.add(val);
+    }
+    public Sequence(int[] array) {
+        this();
+        for (double val:array) {
+            sequence.add(val);
+        }
     }
 
     @Override

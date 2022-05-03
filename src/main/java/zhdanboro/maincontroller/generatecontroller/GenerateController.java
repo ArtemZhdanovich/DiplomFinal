@@ -3,7 +3,6 @@ package zhdanboro.maincontroller.generatecontroller;
 import zhdanboro.generation.generator.Generator;
 import zhdanboro.generation.generator.fabric.GeneratorCreator;
 import zhdanboro.generation.generator.fabric.GeneratorType;
-import zhdanboro.generation.generator.lfsr.LFSRGenerator;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.maincontroller.generatecontroller.utils.Properties;
 
@@ -40,6 +39,16 @@ public class GenerateController {
         Generator initialGenerator = GeneratorCreator.createGenerator(properties.getPolynomial(),GeneratorType.LFSR);
         Generator generator = GeneratorCreator.createGenerator(initialGenerator.getState(properties.getStartPosition()), GeneratorType.LFSR);
         return new Sequence(generator.doubleArray(properties.getSequenceLength()));
+    }
+    public Sequence generateBitSequence() {
+        Generator initialGenerator = GeneratorCreator.createGenerator(properties.getPolynomial(),GeneratorType.LFSR);
+        Generator generator = GeneratorCreator.createGenerator(initialGenerator.getState(properties.getStartPosition()), GeneratorType.LFSR);
+        return new Sequence(generator.bitArray(properties.getSequenceLength()));
+    }
+    public Sequence generateBitSequenceOffset(int offset) {
+        Generator initialGenerator = GeneratorCreator.createGenerator(properties.getPolynomial(),GeneratorType.LFSR);
+        Generator generator = GeneratorCreator.createGenerator(initialGenerator.getState(offset), GeneratorType.LFSR);
+        return new Sequence(generator.bitArray(properties.getSequenceLength()));
     }
     public Sequence[] generateSequenceArray() {
         Generator initialGenerator = GeneratorCreator.createGenerator(properties.getProcessPolynomial(),GeneratorType.LFSR);

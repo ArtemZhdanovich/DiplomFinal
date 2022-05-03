@@ -1,6 +1,7 @@
 package zhdanboro.maincontroller;
 
 import zhdanboro.analyzing.AnalyzeGeneration;
+import zhdanboro.analyzing.AnalyzeSequenceTests;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.GraphicsCreator;
 import zhdanboro.maincontroller.generatecontroller.GenerateController;
@@ -14,6 +15,8 @@ public class MainController {
         creator = new GraphicsCreator("График функции");
     }
     public void generate(String[] args) {
+//        AnalyzeSequenceTests analyzeSequenceTests = new AnalyzeSequenceTests();
+//        analyzeSequenceTests.analyzeFrequency("1011010101");
         checkFunction();
     }
 
@@ -26,6 +29,7 @@ public class MainController {
             Sequence sequence = controller.generateSequence();
             creator.updateTitle(creator.getTitle() + " №" + (controller.getProperties().getStartPosition()+1));
             creator.createChart(sequence, controller.getProperties().getDeviation());
+            checkAnalyzeBest(controller.generateBitSequence());
         } else {
             Sequence resultSequence = AnalyzeGeneration.createSequenceOffBoundsIndices(controller.generateSequenceArray(), controller.getProperties().getDeviation());
             creator.updateTitle(creator.getTitle() + " точек входа в интервал");
@@ -34,11 +38,16 @@ public class MainController {
             Sequence bestSequence = AnalyzeGeneration.findBestSequence(controller.generateSequenceArray(), controller.getProperties().getDeviation());
             creator = new GraphicsCreator("График функции №" + (resultSequence.getMinIndex()+1));
             creator.createChart(bestSequence, controller.getProperties().getDeviation());
+            checkAnalyzeBest(controller.generateBitSequenceOffset(resultSequence.getMinIndex()));
         }
     }
 
-    private void checkAnalyzeBest(GenerateController controller, GraphicsCreator creator) {
-
+    private void checkAnalyzeBest(Sequence sequence) {
+        if (controller.getProperties().isAnalyzeSequence()) {
+            AnalyzeSequenceTests analyzer = new AnalyzeSequenceTests();
+            analyzer.analyzeByTests(sequence);
+            analyzer.showResults();
+        }
     }
 
     public static void analyze() {

@@ -2,7 +2,6 @@ package zhdanboro.analyzing.utils;
 
 import org.apache.commons.math3.special.Erf;
 import org.apache.commons.math3.util.Pair;
-import org.apache.mahout.math.*;
 import org.apache.mahout.math.jet.stat.Gamma;
 import zhdanboro.generation.sequence.Sequence;
 
@@ -25,12 +24,12 @@ public class Tests {
 
     public static Pair<Double, Boolean> frequencyBlockTest(Sequence sequence) {
         int blockLen = (int) Math.floor(Math.sqrt(sequence.getLength()));
-        int blockCount = (int) Math.floor(sequence.getLength() / blockLen);
+        int blockCount = (int) Math.floor((double) sequence.getLength() / blockLen);
         double sum = 0.0000;
         double chiSquared;
 
-        int blockSum = 0;
-        double pi = 0.0000;
+        int blockSum;
+        double pi;
         for (int i = 0; i < blockCount; i++) {
             blockSum = 0;
             for (int k = 0; k < blockLen; k++)
