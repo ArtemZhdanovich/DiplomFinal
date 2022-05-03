@@ -9,6 +9,8 @@ public class Properties {
         boolean saveToBase;
         boolean analyzeSequence;
 
+        String processPolynomial;
+
     public String getPolynomial() {
         return polynomial;
     }
@@ -31,6 +33,10 @@ public class Properties {
         return analyzeSequence;
     }
 
+    public String getProcessPolynomial() {
+        return processPolynomial;
+    }
+
     public void setPolynomial(String polynomial) {
         this.polynomial = polynomial;
     }
@@ -51,5 +57,9 @@ public class Properties {
     }
     public void setAnalyzeSequence(boolean analyzeSequence) {
         this.analyzeSequence = analyzeSequence;
+    }
+
+    public void setProcessPolynomial(String processPolynomial) {
+        this.processPolynomial = processPolynomial;
     }
 }

@@ -3,6 +3,7 @@ package zhdanboro.maincontroller.generatecontroller;
 import zhdanboro.generation.generator.Generator;
 import zhdanboro.generation.generator.fabric.GeneratorCreator;
 import zhdanboro.generation.generator.fabric.GeneratorType;
+import zhdanboro.generation.generator.lfsr.LFSRGenerator;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.maincontroller.generatecontroller.utils.Properties;
 
@@ -12,6 +13,7 @@ public class GenerateController {
 
     public GenerateController(String[] args) {
         properties = generateProperties(args);
+        createInitialPolynomialState();
     }
 
     private Properties generateProperties(String[] args) {
@@ -27,13 +29,18 @@ public class GenerateController {
         return propertiesInner;
     }
 
+    private void createInitialPolynomialState() {
+        Generator initialGenerator = GeneratorCreator.createGenerator(properties.getPolynomial(), GeneratorType.LFSR);
+        properties.setProcessPolynomial(initialGenerator.getState(properties.getStartPosition()));
+    }
+
     public Sequence generateSequence() {
         Generator initialGenerator = GeneratorCreator.createGenerator(properties.getPolynomial(),GeneratorType.LFSR);
         Generator generator = GeneratorCreator.createGenerator(initialGenerator.getState(properties.getStartPosition()), GeneratorType.LFSR);
         return new Sequence(generator.doubleArray(properties.getSequenceLength()));
     }
     public Sequence[] generateSequenceArray() {
-        Generator initialGenerator = GeneratorCreator.createGenerator(properties.getPolynomial(),GeneratorType.LFSR);
+        Generator initialGenerator = GeneratorCreator.createGenerator(properties.getProcessPolynomial(),GeneratorType.LFSR);
         Sequence[] sequences = new Sequence[properties.getGenerationCount()];
         for (int i = 0; i< properties.getGenerationCount(); i++) {
             Generator generator = GeneratorCreator.createGenerator(initialGenerator.getState(i), GeneratorType.LFSR);
