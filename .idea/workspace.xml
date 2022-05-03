@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Изменен класс главного контроллера. Контроллеры и графика в члены класса.">
+    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Добавлен анализ последовательности тестами на частоту и блочную частоту">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/analyzing/AnalyzeSequenceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/analyzing/AnalyzeSequenceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/analyzing/utils/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/analyzing/utils/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/sequence/Sequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/sequence/Sequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/GenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/GenerateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651490005064</updated>
       <workItem from="1651490006297" duration="9151000" />
-      <workItem from="1651562355039" duration="12009000" />
+      <workItem from="1651562355039" duration="14543000" />
     </task>
     <task id="LOCAL-00001" summary="UI + generation">
       <created>1651494361211</created>
@@ -118,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651575177370</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="+ Добавлен анализ последовательности тестами на частоту и блочную частоту">
+      <created>1651579069190</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1651579069190</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +146,7 @@
     <MESSAGE value="+ Добавлена поддержка чекбокса вывода одного графика.&#10;+ Корректно отображаются названия графиков." />
     <MESSAGE value="backup" />
     <MESSAGE value="+ Изменен класс главного контроллера. Контроллеры и графика в члены класса." />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Изменен класс главного контроллера. Контроллеры и графика в члены класса." />
+    <MESSAGE value="+ Добавлен анализ последовательности тестами на частоту и блочную частоту" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Добавлен анализ последовательности тестами на частоту и блочную частоту" />
   </component>
 </project>

@@ -18,6 +18,7 @@ public class AnalyzeSequenceTests {
     public void analyzeByTests(Sequence sequence) {
         results.put("Frequency", Tests.frequencyTest(sequence));
         results.put("FrequencyBlock", Tests.frequencyBlockTest(sequence));
+        results.put("OnesRun", Tests.onesRunTest(sequence));
     }
 
     public void analyzeFrequency(String sequence) {
