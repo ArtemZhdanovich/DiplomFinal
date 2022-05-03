@@ -6,6 +6,7 @@ public class Properties {
         int sequenceLength;
         int generationCount;
         int startPosition;
+        boolean singleGraph;
         boolean saveToBase;
         boolean analyzeSequence;
 
@@ -26,13 +27,15 @@ public class Properties {
     public int getStartPosition() {
         return startPosition;
     }
+    public boolean isSingleGraph() {
+        return singleGraph;
+    }
     public boolean isSaveToBase() {
         return saveToBase;
     }
     public boolean isAnalyzeSequence() {
         return analyzeSequence;
     }
-
     public String getProcessPolynomial() {
         return processPolynomial;
     }
@@ -52,13 +55,15 @@ public class Properties {
     public void setStartPosition(int startPosition) {
         this.startPosition = startPosition;
     }
+    public void setSingleGraph(boolean singleGraph) {
+        this.singleGraph = singleGraph;
+    }
     public void setSaveToBase(boolean saveToBase) {
         this.saveToBase = saveToBase;
     }
     public void setAnalyzeSequence(boolean analyzeSequence) {
         this.analyzeSequence = analyzeSequence;
     }
-
     public void setProcessPolynomial(String processPolynomial) {
         this.processPolynomial = processPolynomial;
     }

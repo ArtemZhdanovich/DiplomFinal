@@ -52,7 +52,8 @@
                         <Label layoutX="285.0" layoutY="169.0" prefHeight="18.0" prefWidth="218.0" text="Начать с" />
                         <TextField fx:id="startStageTextField" layoutX="283.0" layoutY="189.0" prefHeight="26.0" prefWidth="192.0" />
 
-                        <CheckBox fx:id="saveToBaseCheckBox" layoutX="53.0" layoutY="262.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="192.0" text="Сохранить результат в базу" />
+                        <CheckBox fx:id="singleGraphCheckBox" layoutX="53.0" layoutY="242.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="189.0" text="Сгенерировать один график" />
+                        <CheckBox fx:id="saveToBaseCheckBox" layoutX="53.0" layoutY="267.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="192.0" text="Сохранить результат в базу" />
                         <CheckBox fx:id="analyzeBest" layoutX="53.0" layoutY="292.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="235.0" text="Анализ лучшей последовательности" />
 
                         <Button fx:id="buttonStartGenerate" layoutX="228.0" layoutY="353.0" mnemonicParsing="false" onAction="#startGenerate" prefHeight="26.0" prefWidth="85.0" text="Начать" />

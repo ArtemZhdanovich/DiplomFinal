@@ -4,8 +4,16 @@ import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.charts.XYChart;
 
 import javax.swing.*;
+import java.util.StringTokenizer;
 
-public record GraphicsCreator(String title) {
+public class GraphicsCreator {
+    String baseTitle;
+    String title;
+
+    public GraphicsCreator(String title) {
+        baseTitle = title;
+        this.title = title;
+    }
     void initChart(XYChart chart) {
         chart.setAlwaysOnTop(false);
         chart.pack();
@@ -24,5 +32,12 @@ public record GraphicsCreator(String title) {
             XYChart chart = new XYChart("Function", sequence, deviation, title);
             initChart(chart);
         });
+    }
+
+    public void updateTitle(String newTitle) {
+        this.title = newTitle;
+    }
+    public String getTitle() {
+        return baseTitle;
     }
 }

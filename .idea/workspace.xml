@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="updated graphics creating">
+    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="блок генерации связан с UI. Добавлено корректное указание начального состояния">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/graphics/GraphicsCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/graphics/GraphicsCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/GenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/GenerateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/utils/GenerationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/utils/GenerationUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651490005064</updated>
       <workItem from="1651490006297" duration="9151000" />
-      <workItem from="1651562355039" duration="1304000" />
+      <workItem from="1651562355039" duration="4690000" />
     </task>
     <task id="LOCAL-00001" summary="UI + generation">
       <created>1651494361211</created>
@@ -86,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651504223112</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="блок генерации связан с UI. Добавлено корректное указание начального состояния">
+      <created>1651567563741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651567563741</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +119,7 @@
     <MESSAGE value="UI + generation" />
     <MESSAGE value="added single graph builder" />
     <MESSAGE value="updated graphics creating" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated graphics creating" />
+    <MESSAGE value="блок генерации связан с UI. Добавлено корректное указание начального состояния" />
+    <option name="LAST_COMMIT_MESSAGE" value="блок генерации связан с UI. Добавлено корректное указание начального состояния" />
   </component>
 </project>

@@ -24,7 +24,7 @@ public class GenerationUtils {
     }
 
     private static String[] toArgs(Map<String, String> map) {
-        String[] args = new String[7];
+        String[] args = new String[8];
         args[0] = map.get("Polynomial");
         args[1] = map.get("Deviation");
         args[2] = map.get("Length");
@@ -32,6 +32,7 @@ public class GenerationUtils {
         args[4] = map.get("Start");
         args[5] = map.get("Save");
         args[6] = map.get("Analyze");
+        args[7] = map.get("Single");
 
         return args;
     }

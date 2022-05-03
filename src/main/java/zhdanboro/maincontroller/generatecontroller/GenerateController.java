@@ -23,8 +23,10 @@ public class GenerateController {
         propertiesInner.setSequenceLength(Integer.parseInt(args[2]));
         propertiesInner.setGenerationCount(Integer.parseInt(args[3]));
         propertiesInner.setStartPosition(Integer.parseInt(args[4])-1);
-        propertiesInner.setSaveToBase(Boolean.getBoolean(args[5]));
-        propertiesInner.setSaveToBase(Boolean.getBoolean(args[6]));
+
+        propertiesInner.setSaveToBase(Boolean.parseBoolean(args[5]));
+        propertiesInner.setAnalyzeSequence(Boolean.parseBoolean(args[6]));
+        propertiesInner.setSingleGraph(Boolean.parseBoolean(args[7]));
 
         return propertiesInner;
     }

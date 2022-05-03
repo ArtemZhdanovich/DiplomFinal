@@ -66,6 +66,8 @@ public class DiplomUIController {
     @FXML
     private TextField startStageTextField;
     @FXML
+    private CheckBox singleGraphCheckBox;
+    @FXML
     private CheckBox saveToBaseCheckBox;
     @FXML
     private CheckBox analyzeBest;
@@ -134,6 +136,10 @@ public class DiplomUIController {
         generateParameters.put("Count", generationCountTextField.getText());
         generateParameters.put("Start", startStageTextField.getText());
 
+        if (singleGraphCheckBox.isSelected())
+            generateParameters.put("Single", "true");
+        else
+            generateParameters.put("Single", "false");
         if (saveToBaseCheckBox.isSelected())
             generateParameters.put("Save", "true");
         else
