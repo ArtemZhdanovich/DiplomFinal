@@ -60,6 +60,16 @@ public class GenerateController {
 
         return sequences;
     }
+    public Sequence[] generateBitSequenceArray() {
+        Generator initialGenerator = GeneratorCreator.createGenerator(properties.getProcessPolynomial(),GeneratorType.LFSR);
+        Sequence[] sequences = new Sequence[properties.getGenerationCount()];
+        for (int i = 0; i< properties.getGenerationCount(); i++) {
+            Generator generator = GeneratorCreator.createGenerator(initialGenerator.getState(i), GeneratorType.LFSR);
+            sequences[i] = new Sequence(generator.bitArray(properties.getSequenceLength()));
+        }
+
+        return sequences;
+    }
 
     public Properties getProperties() {
         return properties;

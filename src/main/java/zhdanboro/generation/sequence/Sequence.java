@@ -46,8 +46,12 @@ public class Sequence implements Iterable<Double>{
 
     @Override
     public String toString() {
-        return "Sequence{" +
-                "sequence=" + sequence +
-                '}';
+        StringBuilder res = new StringBuilder();
+        for (double val:sequence) {
+            res.append(val);
+            res.append(" ");
+        }
+
+        return res.toString();
     }
 }

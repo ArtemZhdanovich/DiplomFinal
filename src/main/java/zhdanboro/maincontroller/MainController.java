@@ -2,6 +2,7 @@ package zhdanboro.maincontroller;
 
 import zhdanboro.analyzing.AnalyzeGeneration;
 import zhdanboro.analyzing.AnalyzeSequenceTests;
+import zhdanboro.database.DatabaseService;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.GraphicsCreator;
 import zhdanboro.maincontroller.generatecontroller.GenerateController;
@@ -15,13 +16,12 @@ public class MainController {
         creator = new GraphicsCreator("График функции");
     }
     public void generate(String[] args) {
-//        AnalyzeSequenceTests analyzeSequenceTests = new AnalyzeSequenceTests();
-//        analyzeSequenceTests.analyzeFrequency("1011010101");
         checkFunction();
     }
 
     private void checkFunction() {
         checkSingleGraph();
+        checkSaveToBase();
     }
 
     private void checkSingleGraph() {
@@ -41,12 +41,25 @@ public class MainController {
             checkAnalyzeBest(controller.generateBitSequenceOffset(resultSequence.getMinIndex()));
         }
     }
-
     private void checkAnalyzeBest(Sequence sequence) {
         if (controller.getProperties().isAnalyzeSequence()) {
             AnalyzeSequenceTests analyzer = new AnalyzeSequenceTests();
             analyzer.analyzeByTests(sequence);
             analyzer.showResults();
+        }
+    }
+    private void checkSaveToBase() {
+        if (controller.getProperties().isSaveToBase()) {
+            if (!DatabaseService.saveToDatabase(false, controller.getProperties().getPolynomial(), controller.generateSequenceArray()))
+                System.out.println("Error in writing file");
+            else
+                System.out.println("Write OK");
+
+            if (!DatabaseService.saveToDatabase(true, controller.getProperties().getPolynomial(), controller.generateBitSequenceArray()))
+                System.out.println("Error in writing binary file");
+            else
+                System.out.println("Write OK");
+
         }
     }
 
