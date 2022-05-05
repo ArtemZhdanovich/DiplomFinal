@@ -16,7 +16,6 @@ public class DatabaseService {
         }
 
         try (FileWriter writer = new FileWriter(pathToFile, true)){
-
             //writer.write("Polynomial: " + polynomial + "\n");
             for (Sequence sequence : sequences) {
                 String toWrite = sequence.toString();

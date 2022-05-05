@@ -12,21 +12,30 @@
                         <Label layoutX="40.0" layoutY="32.0" prefHeight="18.0" prefWidth="231.0" text="Выберите файл с последовательностью" />
                         <TextField fx:id="sequenceFileTextField" layoutX="40.0" layoutY="56.0" prefHeight="26.0" prefWidth="217.0" />
                         <Button fx:id="sequenceFileChooseButton" layoutX="259.0" layoutY="57.0" mnemonicParsing="false" onAction="#chooseSequenceFile" text="Выбрать" />
+                        <Label fx:id="errorSequenceFileLabel" layoutX="40.0" layoutY="82.0" prefHeight="18.0" prefWidth="358.0" textFill="#f70505" />
 
                         <Label layoutX="40.0" layoutY="106.0" prefHeight="18.0" prefWidth="196.0" text="Тип последовательности" />
                         <RadioButton fx:id="typeBinary" layoutX="40.0" layoutY="131.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Бинарная" />
                         <RadioButton fx:id="typeNormal" layoutX="40.0" layoutY="149.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="[0,1]" />
                         <RadioButton fx:id="typeOther" layoutX="40.0" layoutY="167.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Другой" />
+                        <Label fx:id="errorSequenceTypeLabel" layoutX="41.0" layoutY="185.0" prefHeight="18.0" prefWidth="248.0" textFill="#f70505" />
+
+                        <Label layoutX="300.0" layoutY="107.0" prefHeight="18.0" prefWidth="181.0" text="Критерий совпадения (&gt;=)" />
+                        <RadioButton fx:id="fiftyPercentCriteria" layoutX="300.0" layoutY="132.0" mnemonicParsing="false" text="50%" />
+                        <RadioButton fx:id="seventyFivePercentCriteria" layoutX="301.0" layoutY="150.0" mnemonicParsing="false" text="75%" />
+                        <RadioButton fx:id="hundredPercentCriteria" layoutX="301.0" layoutY="168.0" mnemonicParsing="false" text="100%" />
+                        <Label fx:id="errorCriteriaLabel" layoutX="299.0" layoutY="187.0" prefHeight="18.0" prefWidth="193.0" textFill="#f70505" />
 
                         <Label layoutX="40.0" layoutY="204.0" prefHeight="18.0" prefWidth="142.0" text="Анализ по базе:" />
                         <RadioButton fx:id="useBaseInner" layoutX="40.0" layoutY="231.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Встроенная" />
                         <RadioButton fx:id="useBaseOther" layoutX="40.0" layoutY="249.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" text="Другая" />
+                        <Label fx:id="errorBaseTypeLabel" layoutX="41.0" layoutY="327.0" prefHeight="18.0" prefWidth="280.0" textFill="#f70505" />
 
                         <Label layoutX="41.0" layoutY="276.0" prefHeight="18.0" prefWidth="231.0" text="Выберите файл с базой эталонов" />
                         <TextField fx:id="baseFileTextField" layoutX="41.0" layoutY="300.0" prefHeight="26.0" prefWidth="217.0" />
                         <Button fx:id="baseFileChooseButton" layoutX="260.0" layoutY="301.0" mnemonicParsing="false" onAction="#chooseBaseFile" text="Выбрать" />
 
-                        <Button layoutX="232.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" text="Начать" />
+                        <Button layoutX="232.0" layoutY="353.0" mnemonicParsing="false" onAction="#startAnalyzing" prefHeight="26.0" prefWidth="81.0" text="Начать" />
                     </children>
                 </AnchorPane>
             </content></Tab>
