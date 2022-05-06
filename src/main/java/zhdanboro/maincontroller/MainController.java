@@ -1,5 +1,6 @@
 package zhdanboro.maincontroller;
 
+import org.apache.commons.math3.util.Pair;
 import zhdanboro.analyzing.AnalyzeGeneration;
 import zhdanboro.analyzing.AnalyzeSequenceTests;
 import zhdanboro.database.DatabaseService;
@@ -7,6 +8,8 @@ import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.GraphicsCreator;
 import zhdanboro.maincontroller.analyzecontroller.AnalyzeController;
 import zhdanboro.maincontroller.generatecontroller.GenerateController;
+import zhdanboro.maincontroller.generatecontroller.utils.PackInfo;
+import zhdanboro.ui.ModalWindow;
 
 public class MainController {
     GenerateController generateController;
@@ -59,6 +62,9 @@ public class MainController {
             AnalyzeSequenceTests analyzer = new AnalyzeSequenceTests();
             analyzer.analyzeByTests(sequence);
             analyzer.showResults();
+
+            String[] args = PackInfo.pack(analyzer.getResults());
+            new ModalWindow().showAnalyzeStat(args);
         }
     }
     private void checkSaveToBase() {
@@ -78,6 +84,11 @@ public class MainController {
 
     //////////////////////////////// Analyze block ////////////////////////////////
     public void analyze() {
-        System.out.println(analyzeController.analyze());
+        Pair<Boolean, String>pair = analyzeController.analyze();
+        String[] args = new String[2];
+        args[0] = pair.getFirst() ?"Последовательность найдена в базе": "Последовательность не найдена";
+        args[1] = "Степень совпадения: " + pair.getSecond();
+
+        new ModalWindow().showFindWindow(args);
     }
 }

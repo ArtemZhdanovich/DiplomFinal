@@ -1,5 +1,7 @@
 package zhdanboro.maincontroller.analyzecontroller;
 
+import org.apache.commons.math3.util.Pair;
+import org.apache.commons.math3.util.Precision;
 import zhdanboro.database.DatabaseService;
 import zhdanboro.generation.sequence.Sequence;
 
@@ -36,8 +38,10 @@ public class AnalyzeController {
 
     }
 
-    public boolean analyze() {
+    public Pair<Boolean, String> analyze() {
         boolean equal = false;
+        double actualPercent = 0;
+        double maxPercent = 0;
         for (Sequence seq:databaseSequences) {
             int posSeq = 0;
             int posDat = 0;
@@ -62,9 +66,14 @@ public class AnalyzeController {
             }
 
             equal = (double)equalCount/sequence.getLength()>=equalCriteria;
+            actualPercent = (double) equalCount/sequence.getLength();
+            if (actualPercent>maxPercent)
+                maxPercent = actualPercent;
             if (equal)
                 break;
         }
-        return equal;
+
+
+        return new Pair<>(equal, Double.valueOf(Precision.round(maxPercent * 100, 2)).toString());
     }
 }

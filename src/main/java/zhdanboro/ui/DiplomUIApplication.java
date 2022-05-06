@@ -12,7 +12,7 @@ public class DiplomUIApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DiplomUIApplication.class.getResource("analyzerXML.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Analyzer");
         stage.setScene(scene);
         stage.show();
     }

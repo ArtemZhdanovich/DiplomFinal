@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DiplomFinal:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Добавлена выгрузка в файл">
-      <change afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/analyzecontroller/AnalyzeController.java" afterDir="false" />
+    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DiplomFinal_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/PackInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/ModalWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/database/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/database/DatabaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/utils/GenerationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/analyzecontroller/AnalyzeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/analyzecontroller/AnalyzeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +68,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/lucif/Desktop/DiplomFinal&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   },
@@ -71,6 +78,12 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lucif\Desktop\DiplomFinal\src\main\resources\zhdanboro\ui" />
+      <recent name="C:\Users\lucif\Desktop\DiplomFinal\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="StartUI" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="zhdanboro.ui.DiplomUIApplication" />
@@ -92,7 +105,8 @@
       <workItem from="1651562355039" duration="17779000" />
       <workItem from="1651662526672" duration="5550000" />
       <workItem from="1651737521237" duration="1812000" />
-      <workItem from="1651740461519" duration="12854000" />
+      <workItem from="1651740461519" duration="15027000" />
+      <workItem from="1651825688885" duration="4766000" />
     </task>
     <task id="LOCAL-00001" summary="UI + generation">
       <created>1651494361211</created>
@@ -164,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651740240999</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --">
+      <created>1651759367004</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651759367004</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +213,7 @@
     <MESSAGE value="+ Добавлен анализ последовательности тестами на частоту и блочную частоту" />
     <MESSAGE value="+ Добавлен анализ последовательности тестами на знакочередование" />
     <MESSAGE value="+ Добавлена выгрузка в файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Добавлена выгрузка в файл" />
+    <MESSAGE value="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --" />
   </component>
 </project>
