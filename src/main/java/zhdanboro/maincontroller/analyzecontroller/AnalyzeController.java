@@ -51,6 +51,8 @@ public class AnalyzeController {
             for (;posDat<seq.getLength(); posDat++) {
                 if (!first)
                     posSeq++;
+                if (posSeq>= sequence.getLength())
+                    posSeq = 0;
                 if (seq.getElement(posDat) == sequence.getElement(posSeq)) {
                     equalCount++;
                     if (first) {
@@ -63,6 +65,8 @@ public class AnalyzeController {
                 if (seq.getElement(i) == sequence.getElement(posSeq))
                     equalCount++;
                 posSeq++;
+                if (posSeq>=sequence.getLength())
+                    posSeq = 0;
             }
 
             equal = (double)equalCount/sequence.getLength()>=equalCriteria;

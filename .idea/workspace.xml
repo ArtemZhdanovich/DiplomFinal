@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DiplomFinal_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/PackInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/ModalWindow.java" afterDir="false" />
+    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Добавлен вывод окна с результатами поиска&#10;+ Исправлен процент совпадения при ненаходе">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/analyzecontroller/AnalyzeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/analyzecontroller/AnalyzeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +99,7 @@
       <workItem from="1651662526672" duration="5550000" />
       <workItem from="1651737521237" duration="1812000" />
       <workItem from="1651740461519" duration="15027000" />
-      <workItem from="1651825688885" duration="4766000" />
+      <workItem from="1651825688885" duration="5596000" />
     </task>
     <task id="LOCAL-00001" summary="UI + generation">
       <created>1651494361211</created>
@@ -185,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651759367004</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="+ Добавлен вывод окна с результатами поиска&#10;+ Исправлен процент совпадения при ненаходе">
+      <created>1651830569574</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651830569574</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +214,7 @@
     <MESSAGE value="+ Добавлен анализ последовательности тестами на знакочередование" />
     <MESSAGE value="+ Добавлена выгрузка в файл" />
     <MESSAGE value="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Добавлен анализ последовательности.&#10;-- основная работа окончена --" />
+    <MESSAGE value="+ Добавлен вывод окна с результатами поиска&#10;+ Исправлен процент совпадения при ненаходе" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Добавлен вывод окна с результатами поиска&#10;+ Исправлен процент совпадения при ненаходе" />
   </component>
 </project>
