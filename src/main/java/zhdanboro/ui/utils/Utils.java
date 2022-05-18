@@ -7,6 +7,8 @@ public class Utils {
     public static String[] packGenerateInfo(Map<String, String> map) {
         if (map.get("Polynomial").length() == 0 | !checkPolynomialInput(map.get("Polynomial")))
             map.put("Polynomial", "10000");
+        if (map.get("Shifts").length() == 0 | !checkPolynomialInput(map.get("Shifts")))
+            map.put("Shifts", "0");
 
         String genLen = Integer.toString((int) (Math.pow(2, map.get("Polynomial").length())-1));
         if (map.get("Deviation").length() == 0)
@@ -45,7 +47,7 @@ public class Utils {
     }
 
     private static String[] toGenerateArgs(Map<String, String> map) {
-        String[] args = new String[8];
+        String[] args = new String[9];
         args[0] = map.get("Polynomial");
         args[1] = map.get("Deviation");
         args[2] = map.get("Length");
@@ -54,6 +56,7 @@ public class Utils {
         args[5] = map.get("Save");
         args[6] = map.get("Analyze");
         args[7] = map.get("Single");
+        args[8] = map.get("Shifts");
 
         return args;
     }

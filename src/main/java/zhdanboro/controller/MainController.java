@@ -1,4 +1,4 @@
-package zhdanboro.maincontroller;
+package zhdanboro.controller;
 
 import org.apache.commons.math3.util.Pair;
 import zhdanboro.analyzing.AnalyzeGeneration;
@@ -6,9 +6,9 @@ import zhdanboro.analyzing.AnalyzeSequenceByTests;
 import zhdanboro.database.DatabaseService;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.GraphicsCreator;
-import zhdanboro.maincontroller.analyzecontroller.AnalyzeController;
-import zhdanboro.maincontroller.generatecontroller.GenerateController;
-import zhdanboro.maincontroller.generatecontroller.utils.PackInfo;
+import zhdanboro.controller.analyzecontroller.AnalyzeController;
+import zhdanboro.controller.generatecontroller.GenerateController;
+import zhdanboro.controller.generatecontroller.utils.PackInfo;
 import zhdanboro.ui.ModalWindow;
 
 public class MainController {
@@ -50,11 +50,11 @@ public class MainController {
             Sequence resultSequence = AnalyzeGeneration.createSequenceOffBoundsIndices(generateController.generateSequenceArray(), generateController.getProperties().getDeviation());
             creator.updateTitle(creator.getTitle() + " точек входа в интервал");
             creator.createChart(resultSequence);
-
-            Sequence bestSequence = AnalyzeGeneration.findBestSequence(generateController.generateSequenceArray(), generateController.getProperties().getDeviation());
-            creator = new GraphicsCreator("График функции №" + (resultSequence.getMinIndex()+1));
-            creator.createChart(bestSequence, generateController.getProperties().getDeviation());
-            checkAnalyzeBest(generateController.generateBitSequenceOffset(resultSequence.getMinIndex()));
+//
+//            Sequence bestSequence = AnalyzeGeneration.findBestSequence(generateController.generateSequenceArray(), generateController.getProperties().getDeviation());
+//            creator = new GraphicsCreator("График функции №" + (resultSequence.getMinIndex()+1));
+//            creator.createChart(bestSequence, generateController.getProperties().getDeviation());
+//            checkAnalyzeBest(generateController.generateBitSequenceOffset(resultSequence.getMinIndex()));
         }
     }
     private void checkAnalyzeBest(Sequence sequence) {

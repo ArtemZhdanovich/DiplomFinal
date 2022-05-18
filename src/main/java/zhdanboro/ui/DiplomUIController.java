@@ -1,13 +1,11 @@
 package zhdanboro.ui;
 
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import zhdanboro.maincontroller.MainController;
+import zhdanboro.controller.MainController;
 import zhdanboro.ui.utils.Utils;
 
 import java.io.File;
@@ -75,7 +73,7 @@ public class DiplomUIController {
     @FXML
     private CheckBox analyzeBest;
     @FXML
-    public ComboBox<String> chooseGeneratorComboBox;
+    private TextField shiftPolynomialTextField;
 
 
     @FXML
@@ -94,11 +92,6 @@ public class DiplomUIController {
         fiftyPercentCriteria.setToggleGroup(criteriaGroup);
         seventyFivePercentCriteria.setToggleGroup(criteriaGroup);
         hundredPercentCriteria.setToggleGroup(criteriaGroup);
-
-        //Sequence generation initializer block
-        ObservableList<String> types = FXCollections.observableArrayList("LFSR", "AES256", "SHA1", "Other");
-        chooseGeneratorComboBox.setItems(types);
-        chooseGeneratorComboBox.setValue("LFSR");
     }
 
     @FXML
@@ -121,6 +114,7 @@ public class DiplomUIController {
         //collecting arguments
         HashMap<String, String> generateParameters = new HashMap<>();
         generateParameters.put("Polynomial", polynomialInputTextField.getText());
+        generateParameters.put("Shifts", shiftPolynomialTextField.getText());
         generateParameters.put("Deviation", deviationTextField.getText());
         generateParameters.put("Length", generationLengthTextField.getText());
         generateParameters.put("Count", generationCountTextField.getText());

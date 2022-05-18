@@ -1,7 +1,6 @@
-package zhdanboro.maincontroller.analyzecontroller;
+package zhdanboro.controller.analyzecontroller;
 
 import org.apache.commons.math3.util.Pair;
-import org.apache.commons.math3.util.Precision;
 import zhdanboro.analyzing.AnalyzeEnteredSequence;
 import zhdanboro.database.DatabaseService;
 import zhdanboro.generation.sequence.Sequence;

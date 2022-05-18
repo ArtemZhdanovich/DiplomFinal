@@ -1,4 +1,4 @@
-package zhdanboro.maincontroller.generatecontroller.utils;
+package zhdanboro.controller.generatecontroller.utils;
 
 import org.apache.commons.math3.util.Pair;
 

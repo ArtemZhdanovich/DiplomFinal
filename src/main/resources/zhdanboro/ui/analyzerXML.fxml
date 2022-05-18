@@ -43,20 +43,20 @@
             <content>
                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                     <children>
-                        <Label layoutX="53.0" layoutY="49.0" prefHeight="18.0" prefWidth="218.0" text="Введите начальный полином" />
+                        <Label layoutX="53.0" layoutY="49.0" prefHeight="18.0" prefWidth="218.0" text="Введите начальное состояние" />
                         <TextField fx:id="polynomialInputTextField" layoutX="52.0" layoutY="71.0" prefHeight="26.0" prefWidth="193.0" />
 
-                        <Label layoutX="53.0" layoutY="109.0" prefHeight="18.0" prefWidth="218.0" text="Длина одной последовательности" />
-                        <TextField fx:id="generationLengthTextField" layoutX="53.0" layoutY="131.0" prefHeight="26.0" prefWidth="191.0" />
+                        <Label layoutX="284.0" layoutY="110.0" prefHeight="18.0" prefWidth="218.0" text="Длина одной последовательности" />
+                        <TextField fx:id="generationLengthTextField" layoutX="283.0" layoutY="135.0" prefHeight="26.0" prefWidth="191.0" />
 
                         <Label layoutX="53.0" layoutY="169.0" prefHeight="18.0" prefWidth="218.0" text="Количество генераций" />
                         <TextField fx:id="generationCountTextField" layoutX="53.0" layoutY="189.0" prefHeight="26.0" prefWidth="192.0" />
 
-                        <Label layoutX="284.0" layoutY="49.0" prefHeight="18.0" prefWidth="218.0" text="Выберите генератор" />
-                        <ComboBox fx:id="chooseGeneratorComboBox" layoutX="284.0" layoutY="71.0" prefHeight="26.0" prefWidth="192.0" />
+                        <Label layoutX="284.0" layoutY="49.0" prefHeight="18.0" prefWidth="218.0" text="Введите образующий полином" />
+                        <TextField fx:id="shiftPolynomialTextField" layoutX="285.0" layoutY="72.0" prefHeight="26.0" prefWidth="188.0" />
 
-                        <Label layoutX="284.0" layoutY="110.0" prefHeight="18.0" prefWidth="190.0" text="Отклонение от среднего" />
-                        <TextField fx:id="deviationTextField" layoutX="285.0" layoutY="132.0" prefHeight="26.0" prefWidth="190.0" />
+                        <Label layoutX="54.0" layoutY="110.0" prefHeight="18.0" prefWidth="190.0" text="Отклонение от среднего" />
+                        <TextField fx:id="deviationTextField" layoutX="54.0" layoutY="135.0" prefHeight="26.0" prefWidth="190.0" />
 
                         <Label layoutX="285.0" layoutY="169.0" prefHeight="18.0" prefWidth="218.0" text="Начать с" />
                         <TextField fx:id="startStageTextField" layoutX="283.0" layoutY="189.0" prefHeight="26.0" prefWidth="192.0" />
@@ -66,6 +66,7 @@
                         <CheckBox fx:id="analyzeBest" layoutX="53.0" layoutY="292.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="235.0" text="Анализ последовательности" />
 
                         <Button fx:id="buttonStartGenerate" layoutX="228.0" layoutY="353.0" mnemonicParsing="false" onAction="#startGenerate" prefHeight="26.0" prefWidth="85.0" text="Начать" />
+
                     </children>
                 </AnchorPane>
             </content></Tab>

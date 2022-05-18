@@ -1,7 +1,8 @@
-package zhdanboro.maincontroller.generatecontroller.utils;
+package zhdanboro.controller.generatecontroller.utils;
 
 public class Properties {
         String polynomial;
+        int[] shifts;
         double deviation;
         int sequenceLength;
         int generationCount;
@@ -15,6 +16,7 @@ public class Properties {
     public String getPolynomial() {
         return polynomial;
     }
+    public int[] getShifts() {return shifts;}
     public double getDeviation() {
         return deviation;
     }
@@ -43,6 +45,7 @@ public class Properties {
     public void setPolynomial(String polynomial) {
         this.polynomial = polynomial;
     }
+    public void setShifts(int[] shifts) {this.shifts = shifts;}
     public void setDeviation(double deviation) {
         this.deviation = deviation;
     }

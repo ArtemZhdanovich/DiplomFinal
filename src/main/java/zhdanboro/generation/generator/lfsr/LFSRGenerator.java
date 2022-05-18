@@ -9,20 +9,21 @@ public class LFSRGenerator implements Generator {
     private int count;
     private final int length;
     private final boolean firstBit;
+    private final int[] shifts;
 
-    private LFSRGenerator(String polynomial, boolean firstBitMode) {
+    private LFSRGenerator(String polynomial, boolean firstBitMode, int[] shifts) {
         initialState = polynomial;
         this.currentState = new StringBuilder(polynomial);
         sum = 0.0000;
         count = 0;
         length = polynomial.length();
         firstBit = firstBitMode;
+        this.shifts = shifts;
     }
 
     private void tick(StringBuilder polynomial) {
         int newByte = Character.getNumericValue(polynomial.charAt(length - 1));
-        int[] arr = TabsTable.getShifts(polynomial.length());
-        for (int a : arr) {
+        for (int a : shifts) {
             newByte ^= Character.getNumericValue(polynomial.charAt(a - 1));
         }
 
@@ -48,11 +49,11 @@ public class LFSRGenerator implements Generator {
         currentState = new StringBuilder(initialState);
     }
 
-    public static LFSRGenerator createLFSRGenerator(String polynomial) {
-        return createLFSRGenerator(polynomial, true);
+    public static LFSRGenerator createLFSRGenerator(String polynomial, int[] shifts) {
+        return createLFSRGenerator(polynomial, true, shifts);
     }
-    public static LFSRGenerator createLFSRGenerator(String polynomial, boolean firstBitType) {
-        return new LFSRGenerator(polynomial, firstBitType);
+    public static LFSRGenerator createLFSRGenerator(String polynomial, boolean firstBitType, int[] shifts) {
+        return new LFSRGenerator(polynomial, firstBitType, shifts);
     }
 
     @Override

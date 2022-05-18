@@ -1,4 +1,4 @@
-package zhdanboro.generation.generator.lfsr;
+package zhdanboro.controller.generatecontroller.utils;
 
 import java.util.Arrays;
 import java.util.HashMap;
