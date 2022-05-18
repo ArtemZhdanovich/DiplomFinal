@@ -5,7 +5,7 @@ import java.util.Map;
 public class Utils {
 
     public static String[] packGenerateInfo(Map<String, String> map) {
-        if (map.get("Polynomial").length() == 0)
+        if (map.get("Polynomial").length() == 0 | !checkPolynomialInput(map.get("Polynomial")))
             map.put("Polynomial", "10000");
 
         String genLen = Integer.toString((int) (Math.pow(2, map.get("Polynomial").length())-1));
@@ -21,6 +21,27 @@ public class Utils {
         map.put("Deviation", map.get("Deviation").replace(",", "."));
 
         return toGenerateArgs(map);
+    }
+
+    private static boolean checkPolynomialInput(String polynomial) {
+        boolean correct = true;
+        if (polynomial.length()<3 | polynomial.length()>16) {
+            correct = false;
+        } else {
+            for (int i = 0; i<polynomial.length(); i++) {
+                if (polynomial.charAt(i) =='0') {
+                    continue;
+                } else if (polynomial.charAt(i) == '1') {
+                    continue;
+                }
+                else {
+                    correct = false;
+                    break;
+                }
+            }
+        }
+
+        return correct;
     }
 
     private static String[] toGenerateArgs(Map<String, String> map) {

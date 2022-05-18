@@ -2,7 +2,7 @@ package zhdanboro.maincontroller;
 
 import org.apache.commons.math3.util.Pair;
 import zhdanboro.analyzing.AnalyzeGeneration;
-import zhdanboro.analyzing.AnalyzeSequenceTests;
+import zhdanboro.analyzing.AnalyzeSequenceByTests;
 import zhdanboro.database.DatabaseService;
 import zhdanboro.generation.sequence.Sequence;
 import zhdanboro.graphics.GraphicsCreator;
@@ -59,7 +59,7 @@ public class MainController {
     }
     private void checkAnalyzeBest(Sequence sequence) {
         if (generateController.getProperties().isAnalyzeSequence()) {
-            AnalyzeSequenceTests analyzer = new AnalyzeSequenceTests();
+            AnalyzeSequenceByTests analyzer = new AnalyzeSequenceByTests();
             analyzer.analyzeByTests(sequence);
             analyzer.showResults();
 

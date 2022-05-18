@@ -55,9 +55,7 @@ public class Properties {
     public void setStartPosition(int startPosition) {
         this.startPosition = startPosition;
     }
-    public void setSingleGraph(boolean singleGraph) {
-        this.singleGraph = singleGraph;
-    }
+    public void setSingleGraph(boolean singleGraph) { this.singleGraph = singleGraph; }
     public void setSaveToBase(boolean saveToBase) {
         this.saveToBase = saveToBase;
     }

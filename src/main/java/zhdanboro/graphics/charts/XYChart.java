@@ -3,6 +3,10 @@ package zhdanboro.graphics.charts;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.axis.NumberTickUnit;
+import org.jfree.chart.axis.StandardTickUnitSource;
+import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
@@ -75,6 +79,7 @@ public class XYChart extends ApplicationFrame {
         renderer.setSeriesPaint(1, Color.BLUE);
         renderer.setSeriesShapesVisible(1, true);
         plot.setRenderer(renderer);
+
     }
     private void customizeGraph(JFreeChart chart) {
         final XYPlot plot = chart.getXYPlot();

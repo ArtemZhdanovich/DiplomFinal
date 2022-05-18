@@ -4,7 +4,7 @@ import zhdanboro.generation.generator.Generator;
 
 public class LFSRGenerator implements Generator {
     private final String initialState;
-    private StringBuilder polynomial;
+    private StringBuilder currentState;
     private double sum;
     private int count;
     private final int length;
@@ -12,7 +12,7 @@ public class LFSRGenerator implements Generator {
 
     private LFSRGenerator(String polynomial, boolean firstBitMode) {
         initialState = polynomial;
-        this.polynomial = new StringBuilder(polynomial);
+        this.currentState = new StringBuilder(polynomial);
         sum = 0.0000;
         count = 0;
         length = polynomial.length();
@@ -21,7 +21,7 @@ public class LFSRGenerator implements Generator {
 
     private void tick(StringBuilder polynomial) {
         int newByte = Character.getNumericValue(polynomial.charAt(length - 1));
-        int[] arr = TabsTable.getArray(polynomial.length());
+        int[] arr = TabsTable.getShifts(polynomial.length());
         for (int a : arr) {
             newByte ^= Character.getNumericValue(polynomial.charAt(a - 1));
         }
@@ -32,7 +32,7 @@ public class LFSRGenerator implements Generator {
 
     private int getBit() {
         int index = firstBit ? 0 : length - 1;
-        return Character.getNumericValue(polynomial.charAt(index));
+        return Character.getNumericValue(currentState.charAt(index));
     }
 
     private double getDouble() {
@@ -45,7 +45,7 @@ public class LFSRGenerator implements Generator {
     private void reset() {
         sum = 0;
         count = 0;
-        polynomial = new StringBuilder(initialState);
+        currentState = new StringBuilder(initialState);
     }
 
     public static LFSRGenerator createLFSRGenerator(String polynomial) {
@@ -58,7 +58,7 @@ public class LFSRGenerator implements Generator {
     @Override
     public double nextDouble() {
         double value = getDouble();
-        tick(polynomial);
+        tick(currentState);
 
         return value;
     }
@@ -66,7 +66,7 @@ public class LFSRGenerator implements Generator {
     @Override
     public int nextBit() {
         int value = getBit();
-        tick(polynomial);
+        tick(currentState);
 
         return value;
     }
@@ -94,8 +94,8 @@ public class LFSRGenerator implements Generator {
     @Override
     public String getState(int offset) {
         for (int i = 0; i<offset; i++)
-            tick(polynomial);
-        String state = new String(polynomial);
+            tick(currentState);
+        String state = new String(currentState);
 
         reset();
         return state;

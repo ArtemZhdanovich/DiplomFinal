@@ -23,7 +23,7 @@ public class TabsTable {
         table.put(16,"15,13,4");
     }
 
-    public static int[] getArray(int key) {
+    public static int[] getShifts(int key) {
         return Arrays.stream((table.get(key).split(","))).mapToInt(Integer::parseInt).toArray();
     }
 }

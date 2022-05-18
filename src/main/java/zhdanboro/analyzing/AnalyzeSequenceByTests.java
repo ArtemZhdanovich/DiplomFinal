@@ -8,10 +8,10 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AnalyzeSequenceTests {
+public class AnalyzeSequenceByTests {
     HashMap<String, Pair<Double, Boolean>> results;
 
-    public AnalyzeSequenceTests() {
+    public AnalyzeSequenceByTests() {
         results = new HashMap<>();
     }
 
