@@ -7,12 +7,12 @@ public class Utils {
     public static String[] packGenerateInfo(Map<String, String> map) {
         if (map.get("Polynomial").length() == 0 | !checkPolynomialInput(map.get("Polynomial")))
             map.put("Polynomial", "10000");
-        if (map.get("Shifts").length() == 0 | !checkPolynomialInput(map.get("Shifts")))
+        if (map.get("Shifts").length() == 0 | !checkPolynomialInput(map.get("Shifts")) | map.get("Shifts").length()>map.get("Polynomial").length())
             map.put("Shifts", "0");
 
         String genLen = Integer.toString((int) (Math.pow(2, map.get("Polynomial").length())-1));
         if (map.get("Deviation").length() == 0)
-            map.put("Deviation", Double.toString(0.0000));
+            map.put("Deviation", Double.toString(0.0500));
         if (map.get("Length").length() == 0)
             map.put("Length", genLen);
         if (map.get("Count").length() == 0)

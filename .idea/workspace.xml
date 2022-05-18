@@ -9,16 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Промежуточный сохран">
+    <list default="true" id="8fbc9a6a-e6eb-4cef-9832-49244385ddaa" name="Changes" comment="+ Добавлена возможность изменить образующий полином">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/generator/fabric/GeneratorCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/generator/fabric/GeneratorCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/generator/lfsr/LFSRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/generator/lfsr/LFSRGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/generation/generator/lfsr/TabsTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/TabsTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/GenerateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/GenerateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/maincontroller/generatecontroller/utils/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/DiplomUIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zhdanboro/ui/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/zhdanboro/ui/analyzerXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +111,7 @@
       <workItem from="1652687579265" duration="2191000" />
       <workItem from="1652693421677" duration="1063000" />
       <workItem from="1652698421946" duration="355000" />
-      <workItem from="1652848501585" duration="3069000" />
+      <workItem from="1652848501585" duration="3984000" />
     </task>
     <task id="LOCAL-00001" summary="UI + generation">
       <created>1651494361211</created>
@@ -218,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652849065954</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="+ Добавлена возможность изменить образующий полином">
+      <created>1652854835742</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652854835742</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +250,8 @@
     <MESSAGE value="+ Добавлен вывод окна с результатами поиска&#10;+ Исправлен процент совпадения при ненаходе" />
     <MESSAGE value="+ Добавлена возможность загрузки последовательностей разных размеров" />
     <MESSAGE value="+ Промежуточный сохран" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Промежуточный сохран" />
+    <MESSAGE value="+ Добавлена возможность изменить образующий полином" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Добавлена возможность изменить образующий полином" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
