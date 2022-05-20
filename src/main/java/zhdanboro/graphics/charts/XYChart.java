@@ -48,6 +48,18 @@ public class XYChart extends ApplicationFrame {
         setContentPane(chartPanel);
     }
 
+    public XYChart(final String title, Sequence sequence1, Sequence sequence2, String graphTitle)
+    {
+        super(title);
+
+        XYDataset dataset     = createDataset(sequence1, sequence2);
+        JFreeChart chart      = createChart(dataset, false, graphTitle);
+        ChartPanel chartPanel = new ChartPanel(chart);
+
+        chartPanel.setPreferredSize(new java.awt.Dimension(560, 480));
+        setContentPane(chartPanel);
+    }
+
     private JFreeChart createChart(XYDataset dataset, boolean result, String title) {
         JFreeChart chart = ChartFactory.createXYLineChart(
                 title,
@@ -132,6 +144,21 @@ public class XYChart extends ApplicationFrame {
         dataset.addSeries(upInterval);
         dataset.addSeries(downInterval);
         dataset.addSeries(middle);
+
+        return dataset;
+    }
+
+    private XYDataset createDataset(Sequence sequence1, Sequence sequence2) {
+        final XYSeries sequence = new XYSeries("Эталон" );
+        final XYSeries etalon = new XYSeries("Введенная последовательность");
+        for (int i = 0; i<sequence1.getLength(); i++) {
+            sequence.add(i, sequence1.getElement(i));
+            etalon.add(i, sequence2.getElement(i));
+        }
+
+        final XYSeriesCollection dataset = new XYSeriesCollection();
+        dataset.addSeries(sequence);
+        dataset.addSeries(etalon);
 
         return dataset;
     }

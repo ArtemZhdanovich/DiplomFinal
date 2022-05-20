@@ -35,6 +35,11 @@
                         <TextField fx:id="baseFileTextField" layoutX="41.0" layoutY="300.0" prefHeight="26.0" prefWidth="217.0" />
                         <Button fx:id="baseFileChooseButton" layoutX="260.0" layoutY="301.0" mnemonicParsing="false" onAction="#chooseBaseFile" text="Выбрать" />
 
+                        <CheckBox fx:id="showGrahpCheckBox" layoutX="301.0" layoutY="203.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="174.0" text="Вывести график" />
+                        <CheckBox fx:id="showEqualCheckBox" layoutX="301.0" layoutY="224.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="170.0" text="Вывести совпадение" />
+                        <CheckBox fx:id="analyzeSequenceCheckBox" layoutX="301.0" layoutY="245.0" mnemonicParsing="false" text="Анализ последовательности" />
+                        <CheckBox fx:id="convertCheckBox" layoutX="301.0" layoutY="266.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="182.0" text="Преобразовать" />
+
                         <Button layoutX="232.0" layoutY="353.0" mnemonicParsing="false" onAction="#startAnalyzing" prefHeight="26.0" prefWidth="81.0" text="Начать" />
                     </children>
                 </AnchorPane>

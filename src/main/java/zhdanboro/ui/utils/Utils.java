@@ -72,11 +72,15 @@ public class Utils {
             return args;
         }
 
-        String[] args = new String[4];
+        String[] args = new String[8];
         args[0] = map.get("SequenceFile");
         args[1] = map.get("SequenceType");
         args[2] = map.get("BaseType");
         args[3] = map.get("Criteria");
+        args[4] = map.get("ShowGraph");
+        args[5] = map.get("ShowEqual");
+        args[6] = map.get("AnalyzeSequence");
+        args[7] = map.get("Convert");
 
         return args;
     }

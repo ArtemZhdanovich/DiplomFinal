@@ -53,6 +53,15 @@ public class DiplomUIController {
     private Label errorCriteriaLabel;
 
     @FXML
+    private CheckBox showGrahpCheckBox;
+    @FXML
+    private CheckBox showEqualCheckBox;
+    @FXML
+    private CheckBox analyzeSequenceCheckBox;
+    @FXML
+    private CheckBox convertCheckBox;
+
+    @FXML
     private Button buttonStartGenerate;
 
     //FXML generation block
@@ -197,6 +206,11 @@ public class DiplomUIController {
             errorCriteriaLabel.setText("Выберите критерий");
             correctCriteria = false;
         }
+
+        analyzeParameters.put("ShowGraph", Boolean.valueOf(showGrahpCheckBox.isSelected()).toString());
+        analyzeParameters.put("ShowEqual", Boolean.valueOf(showEqualCheckBox.isSelected()).toString());
+        analyzeParameters.put("AnalyzeSequence", Boolean.valueOf(analyzeSequenceCheckBox.isSelected()).toString());
+        analyzeParameters.put("Convert", Boolean.valueOf(convertCheckBox.isSelected()).toString());
 
         String[] args = Utils.packAnalyzeInfo(analyzeParameters);
         if (args.length == 1) {

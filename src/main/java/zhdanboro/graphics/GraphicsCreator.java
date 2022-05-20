@@ -34,6 +34,13 @@ public class GraphicsCreator {
         });
     }
 
+    public void createChart(Sequence sequence1, Sequence sequence2) {
+        SwingUtilities.invokeLater(() -> {
+            XYChart chart = new XYChart("Function", sequence1, sequence2, title);
+            initChart(chart);
+        });
+    }
+
     public void updateTitle(String newTitle) {
         this.title = newTitle;
     }

@@ -44,6 +44,13 @@ public class Sequence implements Iterable<Double>{
         return sequence.indexOf((double) minValue);
     }
 
+    public double getMin() {
+        return Collections.min(sequence);
+    }
+    public double getMax() {
+        return Collections.max(sequence);
+    }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
